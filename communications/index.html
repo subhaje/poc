@@ -1,0 +1,172 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Greenheck - Communications</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+  </head>
+  <body>
+    <main class="container">
+      <div class="container-container">
+        <h1 class="page-title">COMMUNICATIONS</h1>
+
+        <div class="sort-container">
+          <div class="view-toggle">
+            <button class="view-btn grid-view active"><i class="fas fa-th-large"></i></button>
+            <button class="view-btn list-view"><i class="fas fa-bars"></i></button>
+          </div>
+  
+          <div class="sort-container">
+            <!-- <label for="sort-by">Sort by:</label> -->
+            <select id="sort-by">
+              <option value="newest">Newest First</option>
+              <option value="oldest">Oldest First</option>
+              <option value="name-asc">Name (A-Z)</option>
+              <option value="name-desc">Name (Z-A)</option>
+            </select>
+          </div>
+        </div>
+
+      </div>
+      <!-- <p class="page-subtitle">Models: 200 | Last Updated: 04/01</p> -->
+      <div class="divider-line"></div>
+
+      <!-- <p class="page-subtitle">Models: 200 | Last Updated: 04/01 | <a href="version-history.html">Version: <span id="version-number">1.0.0</span></a></p> -->
+
+
+      <div class="content-wrapper">
+        <aside class="filters">
+          <div class="filter-section">
+            <h3>Filter by Keyword</h3>
+            <div class="search-box">
+              <input type="text" id="keyword-search" placeholder="Enter Keyword" />
+              <i class="fas fa-search search-icon"></i>
+            </div>
+          </div>
+
+          <div class="filter-section">
+            <h3>Topic</h3>
+            <div class="filter-options">
+              <label
+                ><input type="checkbox" name="topic" value="codes-standards" /> Codes &
+                Standards</label
+              >
+              <label
+                ><input type="checkbox" name="topic" value="fan-energy-index" /> Fan Energy
+                Index</label
+              >
+              <label
+                ><input type="checkbox" name="topic" value="indoor-air-quality" /> Indoor Air
+                Quality</label
+              >
+              <label
+                ><input type="checkbox" name="topic" value="system-balancing" /> System
+                Balancing</label
+              >
+              <label class="hidden-option"
+                ><input type="checkbox" name="topic" value="energy-recovery" /> Energy
+                Recovery</label
+              >
+              <label class="hidden-option"
+                ><input type="checkbox" name="topic" value="air-distribution" /> Air
+                Distribution</label
+              >
+              <label class="hidden-option"
+                ><input type="checkbox" name="topic" value="refrigerant-transition" /> Refrigerant
+                Transition</label
+              >
+              <label class="hidden-option"
+                ><input type="checkbox" name="topic" value="hvac-education-training" /> HVAC
+                Education and Training</label
+              >
+            </div>
+            <a href="#" class="view-more">View More <i class="fas fa-chevron-down"></i></a>
+          </div>
+
+          <div class="filter-section">
+            <h3>Product Category</h3>
+            <div class="filter-options">
+              <label><input type="checkbox" name="category" value="fans" /> Fans</label>
+              <label><input type="checkbox" name="category" value="dampers" /> Dampers</label>
+              <label><input type="checkbox" name="category" value="louvers" /> Louvers</label>
+              <label
+                ><input type="checkbox" name="category" value="grilles-registers-diffusers" />
+                Grilles, Registers & Diffusers</label
+              >
+              <label class="hidden-option"
+                ><input type="checkbox" name="category" value="air-terminal-units" /> Air Terminal
+                Units</label
+              >
+              <label class="hidden-option"
+                ><input type="checkbox" name="category" value="air-handling-units" /> Air Handling
+                Units (AHUs)</label
+              >
+              <label class="hidden-option"
+                ><input type="checkbox" name="category" value="energy-recovery-ventilators" />
+                Energy Recovery Ventilators (ERVs)</label
+              >
+              <label class="hidden-option"
+                ><input type="checkbox" name="category" value="ductwork" /> Ductwork</label
+              >
+              <label class="hidden-option"
+                ><input type="checkbox" name="category" value="thermostats" /> Thermostats</label
+              >
+            </div>
+            <a href="#" class="view-more">View More <i class="fas fa-chevron-down"></i></a>
+          </div>
+
+          <div class="filter-section">
+            <h3>Communication</h3>
+            <div class="filter-options">
+              <label
+                ><input type="checkbox" name="communication" value="insights" /> Insights</label
+              >
+              <label
+                ><input type="checkbox" name="communication" value="caps-update" /> CAPS
+                Update</label
+              >
+              <label
+                ><input type="checkbox" name="communication" value="bulletin" /> Bulletin</label
+              >
+              <label
+                ><input type="checkbox" name="communication" value="rep-update" /> Rep Update</label
+              >
+            </div>
+          </div>
+
+          <div class="filter-section">
+            <a href="#" class="clear-filters">Clear all filters</a>
+          </div>
+        </aside>
+
+        <div class="products-container">
+          <!-- <div class="sort-container">
+            <label for="sort-by">Sort by:</label>
+            <select id="sort-by">
+              <option value="relevance">Relevance</option>
+              <option value="name-asc">Name (A-Z)</option>
+              <option value="name-desc">Name (Z-A)</option>
+            </select>
+          </div> -->
+          
+
+          <div class="products-grid" id="products-grid">
+            <!-- Product items will be dynamically generated here -->
+          </div>
+
+          <div class="pagination">
+            <a href="#" class="btn-orange load-more">LOAD MORE</a>
+            <a href="#" class="btn-orange show-less" style="display: none;">SHOW LESS</a>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>

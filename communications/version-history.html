@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Greenheck - Version History</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+    <style>
+      /* Additional styles specific to version history page */
+      .version-container {
+        max-width: 800px;
+        margin: 0 auto;
+        background-color: white;
+        padding: 30px;
+        border-radius: 4px;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+      }
+      
+      .back-link {
+        display: inline-block;
+        margin-bottom: 20px;
+        color: #d97a24;
+        text-decoration: none;
+        font-family: 'Helvetica-Condensed';
+      }
+      
+      .back-link:hover {
+        text-decoration: underline;
+      }
+      
+      .back-link i {
+        margin-right: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <main class="container">
+      <h1 class="page-title">VERSION HISTORY</h1>
+      <p class="page-subtitle"><a href="index.html" class="back-link"><i class="fas fa-arrow-left"></i> Back to Communications</a></p>
+      
+      <div class="version-container" id="changelog-content">
+        <!-- Version history content will be dynamically loaded here -->
+      </div>
+    </main>
+
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+        // Fetch version information
+        fetch('version.json')
+          .then(response => response.json())
+          .then(data => {
+            const changelogContent = document.getElementById('changelog-content');
+            
+            // Populate changelog content
+            let changelogHTML = '';
+            data.changelog.forEach(entry => {
+              changelogHTML += `
+                <div class="version-item">
+                  <div class="version-header">
+                    <span class="version-number">Version ${entry.version}</span>
+                    <span class="version-date">${entry.date}</span>
+                  </div>
+                  <ul class="version-changes">
+                    ${entry.changes.map(change => `<li>${change}</li>`).join('')}
+                  </ul>
+                </div>
+              `;
+            });
+            changelogContent.innerHTML = changelogHTML;
+          })
+          .catch(error => console.error('Error loading version information:', error));
+      });
+    </script>
+  </body>
+</html>

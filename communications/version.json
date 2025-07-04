@@ -1,0 +1,37 @@
+{
+  "version": "1.0.0",
+  "lastUpdated": "2023-06-15",
+  "changelog": [
+    {
+      "version": "1.0.0",
+      "date": "2023-06-15",
+      "changes": [
+        "Initial release of the communications page",
+        "Added product filtering by topic, category, and communication type",
+        "Implemented keyword search functionality",
+        "Added sorting options for product display",
+        "Responsive design for all device sizes"
+      ]
+    },
+    {
+      "version": "0.9.0",
+      "date": "2023-05-20",
+      "changes": [
+        "Beta release with core functionality",
+        "Implemented product grid layout",
+        "Added filter sidebar with basic filtering",
+        "Created initial styling and responsive design"
+      ]
+    },
+    {
+      "version": "0.5.0",
+      "date": "2023-04-10",
+      "changes": [
+        "Alpha release with basic structure",
+        "Created HTML layout and CSS foundation",
+        "Added sample product data",
+        "Implemented basic JavaScript functionality"
+      ]
+    }
+  ]
+}
